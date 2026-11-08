@@ -60,6 +60,9 @@ body.go .hint{opacity:0}
 .b{pointer-events:none;cursor:default}
 .b.act{transform:scale(1.14);background:rgba(255,200,100,.14);box-shadow:0 0 24px rgba(255,190,80,.6),inset 0 0 12px rgba(255,210,120,.3)}
 #rst{display:none}
+.dock{position:relative}
+.dock::after{content:" ~Sanjeev Soni~";position:absolute;left:0;right:0;top:100%;margin-top:14px;text-align:center;white-space:nowrap;font:italic 600 clamp(15px,4vw,19px)/1 'Playfair Display',Georgia,serif;letter-spacing:.14em;color:#ffd98a;text-shadow:0 0 14px rgba(255,170,60,.65);pointer-events:none}
+.hint{margin-top:34px}
 body.snd .hint,body.fin .hint,body.rl .hint{opacity:0}
 body.rl .dock{transform:translate3d(0,34vh,0)}
 #stage{position:fixed;inset:0;z-index:2;pointer-events:none;display:flex;justify-content:center;align-items:flex-start;padding-top:calc(5vh + env(safe-area-inset-top,0px));opacity:0;transition:opacity 1s}
@@ -89,7 +92,7 @@ body.rl .dock{transform:translate3d(0,34vh,0)}
 <button class="b" aria-label="Reel" data-target="#stage"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 8h18M9 3l3 5M15 3l3 5"/><path d="M10.500 12v5.500l4.500-2.700z"/></svg></button>
 <button class="b" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M5 3h14v18l-7-5-7 5z"/></svg></button>
 </nav><div class="hint">Tap anywhere for sound</div></div>
-<div id="greet"><h1><i>✨</i><b>Happy Diwali</b><i>✨</i></h1><p>शुभ दीपावली</p></div>
+<div id="greet"><h1><i>✨</i><b>Happy Diwali</b><i>✨</i></h1><p>तमसो मा ज्योतिर्गमय</p></div>
 <button id="rst">Replay magic</button>
 <script>
 const $=s=>document.querySelector(s),R=(a,b)=>a+Math.random()*(b-a),E=t=>1-Math.pow(1-t,3),C=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
